@@ -4,19 +4,34 @@
 Dungeon Crawler RPG (browser-based)
 
 ## Current state
-Phase 1 complete: game definition captured (rules/systems only).
-No implementation started.
+Phase 2 complete: vertical-slice implementation exists and is runnable in a browser.
+
+Implementation constraints (corrected):
+- Runs via a simple static file server (example: `python -m http.server`)
+- No mandatory build step, dev server, bundler, or framework assumptions
+- Plain browser JavaScript using ES modules + static `index.html`/CSS
 
 ## Last completed step
-Phase 1 — Define the game.
+Phase 2 — Vertical slice complete (playable via simple static server; no build/dev server required).
 
 ## Status
-- Phase: Phase 1 — Define the game (completed)
-- State: Definition complete, ready for Phase 2 (Vertical slice implementation)
+- Phase: Phase 2 — Vertical slice (completed)
+- State: Ready for Phase 3 (Iteration & robustness) — not started
 
 ## Notes
 This project uses an explicit AI-agent-driven development process
 with persistent project memory stored in markdown files.
+
+Issue fix (Phase 2):
+- Problem: A Vite + TypeScript + npm toolchain was introduced, making Phase 2 depend on a build/dev server that was not agreed in `DECISIONS.md`.
+- Fix: Refactored the implementation to plain browser ES modules and removed Vite/TypeScript tooling from the critical path. The game now runs from a simple static file server.
+
+Phase 2 verification (manual):
+- Verified the vertical slice runs correctly via a simple static server.
+- Verified grid-based exploration works.
+- Verified turn-based combat works according to this SNAPSHOT.
+- Verified no build step or dev server is required.
+- Verified no Phase 3 work has started.
 
 ## Game Dev Profile
 - Engine: Engine-agnostic (not chosen yet)

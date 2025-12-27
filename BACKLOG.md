@@ -7,10 +7,10 @@
 - [x] Define acceptance criteria for a vertical slice.
 
 ## Phase 2 — Vertical slice (playable)
-- [ ] Implement core loop end-to-end.
-- [ ] Implement input + camera + minimal UX.
-- [ ] Implement 1–2 core mechanics.
-- [ ] Verify the game is playable locally.
+- [x] Implement core loop end-to-end.
+- [x] Implement input + camera + minimal UX.
+- [x] Implement 1–2 core mechanics.
+- [x] Verify the game is playable locally.
 
 ## Phase 3 — Iteration & robustness
 - [ ] Improve feel via tuning parameters.

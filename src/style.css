@@ -1,0 +1,206 @@
+:root {
+  --bg: #0f1220;
+  --panel: #171b2f;
+  --text: #e7e9f5;
+  --muted: #aeb4d6;
+  --border: #2a2f52;
+  --danger: #ff5a6a;
+  --ok: #4be3a3;
+  --focus: #7aa7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+#app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 16px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.title h1 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 40px);
+  grid-template-rows: repeat(8, 40px);
+  gap: 6px;
+  justify-content: start;
+}
+
+.cell {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  user-select: none;
+  background: rgba(255, 255, 255, 0.02);
+  outline: none;
+}
+
+.cell:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+
+.cell.wall {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cell.trap {
+  background: rgba(255, 90, 106, 0.1);
+}
+
+.cell.bonus {
+  background: rgba(75, 227, 163, 0.1);
+}
+
+.cell.exit {
+  background: rgba(122, 167, 255, 0.12);
+}
+
+.hudRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.kv {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.kv .k {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.kv .v {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin: 10px 0 12px;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.log {
+  height: 360px;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.35;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.logLine {
+  margin: 0 0 6px 0;
+  white-space: pre-wrap;
+}
+
+.ok {
+  color: var(--ok);
+}
+
+.danger {
+  color: var(--danger);
+}
+
+.menu {
+  max-width: 560px;
+}
+
+.menu h2 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+
+.classList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.classCard {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.classCard strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+
