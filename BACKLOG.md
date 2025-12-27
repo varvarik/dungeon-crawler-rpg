@@ -1,10 +1,10 @@
 # Project Backlog
 
 ## Phase 1 — Define the game
-- [ ] Define game goal and target platform.
-- [ ] Define core loop and win/lose conditions.
-- [ ] Define controls and camera model.
-- [ ] Define acceptance criteria for a vertical slice.
+- [x] Define game goal and target platform.
+- [x] Define core loop and win/lose conditions.
+- [x] Define controls and camera model.
+- [x] Define acceptance criteria for a vertical slice.
 
 ## Phase 2 — Vertical slice (playable)
 - [ ] Implement core loop end-to-end.
